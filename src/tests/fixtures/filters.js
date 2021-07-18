@@ -3,8 +3,8 @@ import moment from "moment";
 const filters = {
     text: '',
     sortedBy: 'date',
-    startDate: undefined,
-    endDate: undefined
+    startDate: 'undefined',
+    endDate: 'undefined'
 };
 
 const altFilters = {
