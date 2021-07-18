@@ -52,6 +52,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "npm": "^7.19.1"
+    "npm": "^7.19.1",
+    "express": "^4.17.1"
   }
 }
