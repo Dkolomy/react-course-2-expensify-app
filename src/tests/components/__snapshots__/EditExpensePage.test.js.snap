@@ -6,7 +6,7 @@ exports[`shold render EditExpensePage correctly 1`] = `
     expense={
       Object {
         "amount": 4500,
-        "createdAt": "1970-04-30T23:00:00.000Z",
+        "createdAt": 10364400000,
         "description": "Credit Card",
         "id": "3",
         "note": "",
