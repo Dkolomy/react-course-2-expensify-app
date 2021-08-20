@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
         ignoreOrder: false
     });
     return {
-        entry: './src/app.js',
+        entry: ['babel-polyfill', './src/app.js'],
         output: {
             path: path.join(__dirname, 'public'),
             filename: 'bundle.js'
@@ -31,13 +31,20 @@ module.exports = (env, argv) => {
                 loader: 'babel-loader',
                 test: /\.js|jsx$/,
                 exclude: /node_modules/
-            } , {
+            }, 
+            {
                 test: /\.s?css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                            url: false
+                        }
+                    },
                     'sass-loader'
-                ]
+                ],
             }]
         },
         plugins: [
